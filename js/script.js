@@ -1,19 +1,17 @@
-let line1, line2, line3, i, j, temp;
+let  i, j;
 
-line1 = prompt('Введите первое слово:');
-line2 = prompt('Введите второе слово:');
-line3 = prompt('Введите третье слово:');
+let arr = [];
 
-let arr = [line1, line2, line3];
+arr.push(prompt("Введите первое слово: "));
+arr.push(prompt("Введите второе слово: "));
+arr.push(prompt("Введите третье слово: "));
 
 for (i = 0; i < arr.length; ++i) {
     j = Math.floor(Math.random() * (i + 1));
-    console.log(Math.random());
-    temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+        [arr[i],arr[j]] = [arr[j], arr[i]];
 }
-document.write(arr);
+
+document.write(arr.join(" "));
 document.write("<br />");
 
 
